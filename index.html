@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo Serviços</title>
+
+<!-- Fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #222;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 14px 30px;
+  background: white;
+  color: #2a5298;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+  background: #ddd;
+}
+
+/* SERVIÇOS */
+.services {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: reveal 1s forwards;
+}
+
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+.card:nth-child(4) { animation-delay: 0.6s; }
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #2a5298;
+}
+
+/* CTA */
+.cta {
+  background: #2a5298;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 20px;
+}
+
+.cta button {
+  padding: 14px 30px;
+  background: white;
+  color: #2a5298;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Serviços Profissionais para Seu Negócio</h1>
+  <p>Oferecemos soluções eficientes, modernas e estratégicas para impulsionar sua empresa.</p>
+  <button>Solicitar Orçamento</button>
+</section>
+
+<section class="services">
+  <h2>Nossos Serviços</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Instalação</h3>
+      <p>Serviços realizados com qualidade e garantia.</p>
+    </div>
+
+    <div class="card">
+      <h3>Manutenção</h3>
+      <p>Suporte técnico especializado para seu negócio.</p>
+    </div>
+
+    <div class="card">
+      <h3>Consultoria</h3>
+      <p>Estratégias personalizadas para crescimento.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atendimento Rápido</h3>
+      <p>Agilidade e compromisso com prazos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Pronto para transformar seu negócio?</h2>
+  <button>Fale Conosco</button>
+</section>
+
+</body>
+</html>

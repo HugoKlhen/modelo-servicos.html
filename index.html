@@ -3,104 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo Serviços | Tech Style</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Digital Consulting | Serviços</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #050510; /* Fundo Ultra Dark do Canva */
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a0b2e 0%, #0f081a 100%); /* Roxo profundo do Canva */
+            font-family: 'Inter', sans-serif;
             color: white;
             overflow-x: hidden;
         }
-        .bg-gradient-tech {
-            background: linear-gradient(135deg, #6d28d9 0%, #db2777 100%); /* Violeta para Rosa Neon */
+        .font-title { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(109, 40, 217, 0.3), transparent),
+                        radial-gradient(circle at bottom left, rgba(219, 39, 119, 0.1), transparent);
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
+
+        .testimonial-card {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
-        .glass-card:hover {
-            border: 1px solid #db2777;
-            box-shadow: 0 0 20px rgba(219, 39, 119, 0.3);
-            transform: translateY(-10px);
+
+        .testimonial-card:hover {
+            border-color: #f472b6;
+            background: rgba(255, 255, 255, 0.05);
         }
-        .neon-text {
-            background: linear-gradient(to right, #a78bfa, #f472b6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        .neon-border-bottom {
+            border-bottom: 3px solid #6d28d9;
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .float-animation { animation: float 4s ease-in-out infinite; }
     </style>
 </head>
-<body>
+<body class="hero-gradient">
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-600/10 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
-
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 float-animation">
-            Serviços <span class="neon-text">Inteligentes</span> <br>para sua Empresa
-        </h1>
-        <p class="text-gray-400 text-lg max-w-2xl mb-10">
-            Combinamos tecnologia de ponta e design inovador para transformar a presença digital do seu negócio.
-        </p>
-        <div class="flex flex-col md:flex-row gap-4">
-            <button class="bg-gradient-tech px-8 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-pink-500/20">
-                Começar Agora
-            </button>
-            <button class="border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/5 transition">
-                Ver Portfólio
-            </button>
+    <section class="min-h-screen flex flex-col justify-center px-10 md:px-24">
+        <div class="mb-12">
+            <div class="flex items-center gap-2 mb-20">
+                <div class="w-10 h-10 border-2 border-dotted border-pink-500 rounded-full flex items-center justify-center text-xs">H</div>
+                <span class="text-xs uppercase tracking-widest">Harpers Inc.</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-title font-bold mb-8 uppercase leading-tight">
+                Digital <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Consulting</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-4">March 2025</p>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
-            O que <span class="neon-text">entregamos</span>
-        </h2>
+    <section class="py-24 px-10 md:px-24 flex flex-col md:flex-row items-center gap-16">
+        <div class="relative w-64 h-64 md:w-96 md:h-96">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full opacity-80"></div>
+            <div class="absolute bottom-5 left-10 w-32 h-32 md:w-48 md:h-48 bg-[#d8b4fe] rounded-full"></div>
+        </div>
+        
+        <div class="max-w-xl">
+            <h2 class="text-4xl font-title mb-8">About <br>Digital Consulting</h2>
+            <p class="text-gray-400 leading-relaxed text-lg">
+                Oferecemos soluções inteligentes para sua empresa. O que há de especial no seu serviço? 
+                Usamos tecnologia de ponta para destacar sua marca frente à concorrência, unindo 
+                estratégia digital e performance.
+            </p>
+        </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">🚀</div>
-                <h3 class="text-xl font-bold mb-3">Instalação</h3>
-                <p class="text-gray-400 text-sm">Configuração completa e integração total com seus sistemas atuais.</p>
+    <section class="py-24 px-10 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+            <h2 class="text-4xl font-title mb-12">Early Reviews</h2>
+            <div class="w-64 h-64 border-[40px] border-l-blue-800 border-r-purple-500 border-t-blue-800 border-b-purple-500 rounded-full"></div>
+        </div>
+        
+        <div>
+            <div class="testimonial-card">
+                <p class="italic text-gray-300 mb-4">"A instalação foi impecável e o suporte técnico é extremamente especializado."</p>
+                <p class="text-cyan-400 text-sm">Hugo Klhen, CEO</p>
             </div>
-
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">🛠️</div>
-                <h3 class="text-xl font-bold mb-3">Manutenção</h3>
-                <p class="text-gray-400 text-sm">Suporte 24/7 e atualizações constantes para manter sua operação ativa.</p>
+            <div class="testimonial-card">
+                <p class="italic text-gray-300 mb-4">"A consultoria trouxe estratégias personalizadas que mudaram nosso patamar."</p>
+                <p class="text-cyan-400 text-sm">Modelo Gastronomia</p>
             </div>
-
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">📊</div>
-                <h3 class="text-xl font-bold mb-3">Consultoria</h3>
-                <p class="text-gray-400 text-sm">Análise de dados e estratégias personalizadas para seu crescimento.</p>
-            </div>
-
-            <div class="glass-card p-8 rounded-2xl">
-                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">⚡</div>
-                <h3 class="text-xl font-bold mb-3">Atendimento</h3>
-                <p class="text-gray-400 text-sm">Resposta em tempo real com agilidade e compromisso absoluto.</p>
+            <div class="testimonial-card">
+                <p class="italic text-gray-300 mb-4">"Atendimento rápido, ágil e com compromisso total com os prazos."</p>
+                <p class="text-cyan-400 text-sm">Harpers Partners</p>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6">
-        <div class="bg-gradient-tech max-w-5xl mx-auto p-12 rounded-3xl text-center shadow-2xl shadow-pink-500/30">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para dar o próximo passo?</h2>
-            <p class="mb-10 text-white/80">Transforme sua visão em realidade com nossa expertise técnica.</p>
-            <button class="bg-white text-pink-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition">
-                Falar pelo WhatsApp
-            </button>
+    <section class="py-24 px-10 md:px-24 flex flex-col md:flex-row justify-between items-end gap-12">
+        <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-title mb-12">Get a quote or set <br>up a consultation.</h2>
+            
+            <div class="space-y-8">
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">Phone</p>
+                    <p class="text-pink-500 text-xl font-semibold">(123) 456-7890</p>
+                </div>
+                <div>
+                    <p class="text-xs uppercase tracking-widest text-gray-500 mb-2">Email</p>
+                    <p class="text-cyan-400 text-xl font-semibold">hello@start-tech.com</p>
+                </div>
+                <div class="flex gap-4">
+                    <span class="w-8 h-8 rounded-full border border-pink-500 flex items-center justify-center text-xs">M</span>
+                    <span class="w-8 h-8 rounded-full border border-pink-500 flex items-center justify-center text-xs">P</span>
+                    <span class="w-8 h-8 rounded-full border border-pink-500 flex items-center justify-center text-xs">T</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w-full md:w-1/2 h-64 bg-gradient-to-t from-purple-900/40 to-transparent relative border-b-2 border-blue-600">
+            <svg class="w-full h-full" viewBox="0 0 400 200">
+                <path d="M0,150 L50,80 L100,120 L150,50 L200,100 L250,130 L300,90 L350,160 L400,170" 
+                      fill="none" stroke="#db2777" stroke-width="4" />
+                <path d="M0,120 L100,60 L200,90 L300,40 L400,80" 
+                      fill="none" stroke="#6d28d9" stroke-width="4" opacity="0.6"/>
+            </svg>
         </div>
     </section>
 

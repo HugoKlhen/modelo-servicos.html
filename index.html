@@ -1,195 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modelo Serviços</title>
-
-<!-- Fonte -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f4f6f9;
-  color: #222;
-}
-
-/* HERO */
-.hero {
-  height: 90vh;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  flex-direction: column;
-  padding: 20px;
-  animation: fadeIn 1.2s ease-in-out;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin-bottom: 30px;
-}
-
-.hero button {
-  padding: 14px 30px;
-  background: white;
-  color: #2a5298;
-  border: none;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.hero button:hover {
-  transform: scale(1.05);
-  background: #ddd;
-}
-
-/* SERVIÇOS */
-.services {
-  padding: 80px 10%;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 32px;
-  margin-bottom: 50px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: 0.4s;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: reveal 1s forwards;
-}
-
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-.card:nth-child(4) { animation-delay: 0.6s; }
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  color: #2a5298;
-}
-
-/* CTA */
-.cta {
-  background: #2a5298;
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.cta h2 {
-  margin-bottom: 20px;
-}
-
-.cta button {
-  padding: 14px 30px;
-  background: white;
-  color: #2a5298;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.cta button:hover {
-  transform: scale(1.05);
-}
-
-/* ANIMAÇÕES */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* RESPONSIVO */
-@media(max-width:768px) {
-  .hero h1 {
-    font-size: 30px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Serviços | Tech Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #050510; /* Fundo Ultra Dark do Canva */
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+        .bg-gradient-tech {
+            background: linear-gradient(135deg, #6d28d9 0%, #db2777 100%); /* Violeta para Rosa Neon */
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            border: 1px solid #db2777;
+            box-shadow: 0 0 20px rgba(219, 39, 119, 0.3);
+            transform: translateY(-10px);
+        }
+        .neon-text {
+            background: linear-gradient(to right, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation { animation: float 4s ease-in-out infinite; }
+    </style>
 </head>
-
 <body>
 
-<section class="hero">
-  <h1>Serviços Profissionais para Seu Negócio</h1>
-  <p>Oferecemos soluções eficientes, modernas e estratégicas para impulsionar sua empresa.</p>
-  <button>Solicitar Orçamento</button>
-</section>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-pink-600/10 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
 
-<section class="services">
-  <h2>Nossos Serviços</h2>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 float-animation">
+            Serviços <span class="neon-text">Inteligentes</span> <br>para sua Empresa
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mb-10">
+            Combinamos tecnologia de ponta e design inovador para transformar a presença digital do seu negócio.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="bg-gradient-tech px-8 py-4 rounded-full font-bold hover:scale-105 transition shadow-lg shadow-pink-500/20">
+                Começar Agora
+            </button>
+            <button class="border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/5 transition">
+                Ver Portfólio
+            </button>
+        </div>
+    </section>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Instalação</h3>
-      <p>Serviços realizados com qualidade e garantia.</p>
-    </div>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+            O que <span class="neon-text">entregamos</span>
+        </h2>
 
-    <div class="card">
-      <h3>Manutenção</h3>
-      <p>Suporte técnico especializado para seu negócio.</p>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">🚀</div>
+                <h3 class="text-xl font-bold mb-3">Instalação</h3>
+                <p class="text-gray-400 text-sm">Configuração completa e integração total com seus sistemas atuais.</p>
+            </div>
 
-    <div class="card">
-      <h3>Consultoria</h3>
-      <p>Estratégias personalizadas para crescimento.</p>
-    </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">🛠️</div>
+                <h3 class="text-xl font-bold mb-3">Manutenção</h3>
+                <p class="text-gray-400 text-sm">Suporte 24/7 e atualizações constantes para manter sua operação ativa.</p>
+            </div>
 
-    <div class="card">
-      <h3>Atendimento Rápido</h3>
-      <p>Agilidade e compromisso com prazos.</p>
-    </div>
-  </div>
-</section>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">📊</div>
+                <h3 class="text-xl font-bold mb-3">Consultoria</h3>
+                <p class="text-gray-400 text-sm">Análise de dados e estratégias personalizadas para seu crescimento.</p>
+            </div>
 
-<section class="cta">
-  <h2>Pronto para transformar seu negócio?</h2>
-  <button>Fale Conosco</button>
-</section>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-gradient-tech rounded-lg mb-6 flex items-center justify-center">⚡</div>
+                <h3 class="text-xl font-bold mb-3">Atendimento</h3>
+                <p class="text-gray-400 text-sm">Resposta em tempo real com agilidade e compromisso absoluto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="bg-gradient-tech max-w-5xl mx-auto p-12 rounded-3xl text-center shadow-2xl shadow-pink-500/30">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para dar o próximo passo?</h2>
+            <p class="mb-10 text-white/80">Transforme sua visão em realidade com nossa expertise técnica.</p>
+            <button class="bg-white text-pink-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition">
+                Falar pelo WhatsApp
+            </button>
+        </div>
+    </section>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modelo Serviços | Modelo Tech</title>
+  <title>Modelo Serviços | Modelo Tech Neon</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -206,6 +206,22 @@
       filter: blur(0px);
       transform: scale(1.05);
     }
+
+    /* >>> APLICADO: hero-side corporativo com imagem de reunião <<< */
+    .hero-side{
+      position:relative;
+      border-radius: calc(var(--radius) + 6px);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.14);
+
+      background-image:
+        linear-gradient(135deg, rgba(7,8,26,.85), rgba(11,15,42,.85)),
+        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+      background-position: center, center;
+      background-size: cover, cover;
+      background-repeat: no-repeat, no-repeat;
+    }
+
     .hero-side::after{
       content:"";
       position:absolute; inset:0;
@@ -430,7 +446,7 @@
     <div class="container nav-inner">
       <div class="brand">
         <div class="mark"></div>
-        <span>Serviços • Tech Neon</span>
+        <span>Serviços • Tech</span>
       </div>
 
       <nav class="nav-links">
@@ -467,8 +483,7 @@
         </div>
 
         <div class="hero-side reveal">
-          <div class="liquid"></div>
-          <!-- REMOVIDO: cards "Primeira impressão..." e "Visual que transmite..." -->
+          <!-- Fundo corporativo aplicado via CSS (.hero-side) -->
         </div>
       </div>
     </section>

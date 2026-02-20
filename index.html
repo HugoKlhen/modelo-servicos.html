@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modelo Serviços | Modelo Tech Neon</title>
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
 
   <style>
     :root{
@@ -23,21 +21,17 @@
       --neonBlue:#3B7CFF;
       --cyan:#4EF0FF;
 
-
       --text:#F5F6FF;
       --muted:#B9BEE6;
-
 
       --glass: rgba(255,255,255,.07);
       --glass2: rgba(255,255,255,.10);
       --border: rgba(255,255,255,.14);
 
-
       --radius: 22px;
       --shadow: 0 24px 80px rgba(0,0,0,.55);
       --shadowSoft: 0 18px 60px rgba(0,0,0,.35);
     }
-
 
     *{ margin:0; padding:0; box-sizing:border-box; font-family:Inter,system-ui,Segoe UI,Arial,sans-serif; }
     body{
@@ -51,7 +45,6 @@
     }
     a{ color:inherit; text-decoration:none; }
     .container{ width:min(1140px, 92%); margin:0 auto; }
-
 
     /* Subtle animated gradient veil (Canva-ish vibe) */
     .veil{
@@ -70,7 +63,6 @@
       0%{ transform: translate3d(0,0,0) scale(1); }
       100%{ transform: translate3d(0,-12px,0) scale(1.03); }
     }
-
 
     /* NAV */
     .nav{
@@ -109,7 +101,6 @@
     .nav-links a{ opacity:.9; transition:.25s; }
     .nav-links a:hover{ opacity:1; color: var(--cyan); }
 
-
     .nav-cta{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
@@ -124,7 +115,6 @@
     }
     .nav-cta:hover{ transform: translateY(-2px); filter: brightness(1.04); }
 
-
     /* HERO */
     .hero{
       padding:72px 0 30px;
@@ -136,7 +126,6 @@
       gap:30px;
       align-items:center;
     }
-
 
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
@@ -153,7 +142,6 @@
       background: var(--neonPink);
       box-shadow: 0 0 18px rgba(255,43,214,.65);
     }
-
 
     h1{
       margin-top:16px;
@@ -175,7 +163,6 @@
     }
     @keyframes shine{ to{ background-position:200% center; } }
 
-
     .lead{
       margin-top:14px;
       color: rgba(245,246,255,.78);
@@ -183,7 +170,6 @@
       line-height:1.6;
       max-width:58ch;
     }
-
 
     .hero-actions{
       margin-top:24px;
@@ -209,9 +195,6 @@
     }
     .btn-secondary:hover{ background: rgba(255,255,255,.10); }
 
-
-
-
     /* Big “liquid blur” style visual like Canva */
     .liquid{
       position:absolute; inset:0;
@@ -229,7 +212,6 @@
       background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.10), transparent 40%);
       pointer-events:none;
     }
-
 
     .hero-panel{
       position:absolute; left:18px; right:18px; bottom:18px;
@@ -258,7 +240,6 @@
       line-height:1.35;
     }
 
-
     /* SECTION */
     section{ padding:86px 0; }
     .section-title{
@@ -277,7 +258,6 @@
       color: rgba(245,246,255,.72);
       line-height:1.6;
     }
-
 
     /* CARDS (glass blocks like Canva sections) */
     .grid{
@@ -313,7 +293,6 @@
     }
     .card:hover::before{ opacity:1; }
 
-
     .icon{
       width:48px; height:48px; border-radius:18px;
       display:grid; place-items:center;
@@ -333,7 +312,6 @@
       color: rgba(245,246,255,.72);
       line-height:1.6;
     }
-
 
     /* "people images" strip */
     .people{
@@ -358,7 +336,6 @@
     .p1{ background-image:url("https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"); }
     .p2{ background-image:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80"); }
     .p3{ background-image:url("https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=600&q=80"); }
-
 
     /* CTA (big neon band) */
     .cta{
@@ -399,7 +376,6 @@
       margin-inline:auto;
     }
 
-
     /* FOOTER */
     footer{
       padding:36px 0 44px;
@@ -407,7 +383,6 @@
       color: rgba(245,246,255,.66);
       text-align:center;
     }
-
 
     /* WHATSAPP FLOAT */
     .wa-float{
@@ -434,11 +409,9 @@
       font-weight:900;
     }
 
-
     /* REVEAL */
     .reveal{ opacity:0; transform: translateY(18px); transition: all .95s cubic-bezier(0.16,1,0.3,1); }
     .reveal.active{ opacity:1; transform: translateY(0); }
-
 
     /* RESPONSIVE */
     @media (max-width: 920px){
@@ -450,10 +423,8 @@
   </style>
 </head>
 
-
 <body>
   <div class="veil"></div>
-
 
   <header class="nav">
     <div class="container nav-inner">
@@ -462,71 +433,50 @@
         <span>Serviços • Tech Neon</span>
       </div>
 
-
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
         <a href="#equipe">Equipe</a>
         <a href="#cta">Contato</a>
       </nav>
 
-
       <a class="nav-cta" href="#cta">Solicitar orçamento</a>
     </div>
   </header>
 
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div class="reveal">
-          <div class="kicker"><span class="kdot"></span> Soluções digitais para negócios locais</div>
-
+        <div class="reveal" style="text-align:center;">
+          <div class="kicker" style="margin-inline:auto;"><span class="kdot"></span> Soluções digitais para negócios locais</div>
 
           <h1 class="neon-title">
             Produtos & Serviços<br>
             com visual premium
           </h1>
 
-
-          <p class="lead">
+          <p class="lead" style="margin-inline:auto;">
             A sua próxima landing page começa aqui.<br>
             Escolha o estilo ideal para o seu negócio.<br>
             Veja sua marca ganhar presença e autoridade digital.<br>
             Seu negócio merece um site com cara de empresa grande.
           </p>
 
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#cta">Solicitar orçamento gratuito →</a>
+          <div class="hero-actions" style="justify-content:center;">
             <a class="btn btn-secondary" href="#servicos">Ver serviços</a>
           </div>
         </div>
 
-
         <div class="hero-side reveal">
           <div class="liquid"></div>
-          <div class="hero-panel">
-            <div class="mini">
-              <b>Primeira impressão que vende</b>
-              <span>Visual impactante que destaca seu negócio da concorrência.</span>
-            </div>
-            <div class="mini">
-              <b>Visual que transmite autoridade</b>
-              <span>Design que impressiona e gera confiança.</span>
-            </div>
-          </div>
+          <!-- REMOVIDO: cards "Primeira impressão..." e "Visual que transmite..." -->
         </div>
       </div>
     </section>
-
 
     <section id="servicos">
       <div class="container">
         <div class="section-title reveal">
           <h2>Serviços</h2>
-
-
-
 
         <div class="grid">
           <div class="card reveal">
@@ -540,7 +490,6 @@
             <p>Páginas focadas em transformar visitantes em mensagens no WhatsApp e pedidos de orçamento.</p>
           </div>
 
-
           <div class="card reveal">
             <div class="icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -551,7 +500,6 @@
             <h3>Google Local</h3>
             <p>Domine as buscas da sua região e apareça no topo do Google Maps com estrutura pronta.</p>
           </div>
-
 
           <div class="card reveal">
             <div class="icon">
@@ -564,7 +512,6 @@
             <h3>Automações</h3>
             <p>Integrações e fluxos para economizar tempo (formulário → WhatsApp/E-mail).</p>
           </div>
-
 
           <div class="card reveal">
             <div class="icon">
@@ -580,14 +527,12 @@
       </div>
     </section>
 
-
     <section id="equipe">
       <div class="container">
         <div class="section-title reveal">
           <h2>Pessoas por trás da entrega</h2>
           <p>Adicionar imagens humanas aumenta confiança do cliente.</p>
         </div>
-
 
         <div class="people reveal">
           <div class="person p1" aria-label="Pessoa 1"></div>
@@ -597,7 +542,6 @@
       </div>
     </section>
 
-
     <section class="cta" id="cta">
       <div class="container">
         <div class="cta-box reveal">
@@ -606,7 +550,6 @@
             Me chame no WhatsApp e eu te envio uma proposta com prazo e condições.
             Ideal para prestadores de serviço, clínicas e profissionais liberais.
           </p>
-
 
           <div style="margin-top:22px; display:flex; justify-content:center;">
             <a class="btn btn-primary" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">
@@ -618,23 +561,19 @@
     </section>
   </main>
 
-
   <footer>
     <div class="container">
       © <span id="year"></span> • Modelo Serviços • Todos os direitos reservados
     </div>
   </footer>
 
-
   <a class="wa-float" href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">
     <span class="wa-ic">WA</span> WhatsApp
   </a>
 
-
   <script>
     // Ano automático
     document.getElementById("year").textContent = new Date().getFullYear();
-
 
     // Reveal on scroll
     const reveals = document.querySelectorAll(".reveal");

@@ -403,29 +403,35 @@
       text-align:center;
     }
 
-    /* WHATSAPP FLOAT */
+    /* WHATSAPP FLOAT - ATUALIZADO (MENOR E MINIMALISTA) */
     .wa-float{
       position:fixed;
-      right:18px;
-      bottom:18px;
+      right:20px;
+      bottom:20px;
       z-index:80;
-      display:inline-flex;
+      display:flex;
       align-items:center;
-      gap:10px;
-      padding:12px 14px;
+      gap:8px;
+      padding:10px 16px;
       border-radius:999px;
       background:#25D366;
       color:#fff;
-      font-weight:900;
-      box-shadow: 0 24px 70px rgba(0,0,0,.45);
-      transition:.25s;
+      font-weight:700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+      transition: all .3s ease;
     }
-    .wa-float:hover{ transform: translateY(-2px); filter: brightness(1.02); }
+    .wa-float:hover{ 
+      transform: translateY(-3px) scale(1.02); 
+      filter: brightness(1.08); 
+      box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+    }
     .wa-ic{
-      width:34px; height:34px; border-radius:12px;
-      background: rgba(255,255,255,.18);
-      display:grid; place-items:center;
-      font-weight:900;
+      width:22px; 
+      height:22px;
+      display:flex; 
+      align-items:center; 
+      justify-content:center;
     }
 
     /* REVEAL */
@@ -437,7 +443,7 @@
       .hero-grid{ grid-template-columns:1fr; }
       .hero-side{
         min-height: 360px;
-        aspect-ratio: 16 / 10; /* melhor no mobile */
+        aspect-ratio: 16 / 10;
       }
       .card{ grid-column: span 12; }
       .nav-links{ display:none; }
@@ -580,7 +586,13 @@
   </footer>
 
   <a class="wa-float" href="https://wa.me/5548991922263?text=Olá,%20vim%20pela%20landing%20page%20e%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener">
-    <span class="wa-ic">WA</span> WhatsApp
+    <div class="wa-ic">
+      <svg viewBox="0 0 24 24" fill="white">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.284l-.54 1.964 2.056-.54c.937.51 1.999.851 3.214.851 3.181 0 5.765-2.586 5.765-5.766 0-3.18-2.584-5.759-5.765-5.759zM15.427 14.546c-.143.411-.715.751-1.179.804-.428.053-.982.089-1.571-.107-.42-.143-.884-.339-1.509-.607-2.527-1.089-4.143-3.661-4.268-3.821s-1.018-1.357-1.018-2.589c0-1.232.643-1.84 1.018-2.589l.357-.357c.107-.107.25-.179.393-.179.143 0 .286.071.393.179.179.179.411.411.536.696.143.321.179.625.071.893-.107.268-.357.607-.607.893s-.536.571-.786.857c-.25.286-.5.625-.214 1.107.286.482.643.946 1.107 1.411.571.536 1.143 1.018 1.839 1.321.482.214.768.179 1.054-.143.286-.321 1.232-1.429 1.554-1.929.321-.5.643-.411 1.054-.268s2.643 1.25 3.089 1.482c.446.232.75.339.857.518.107.179.107.804-.036 1.214z"/>
+        <path d="M12.031 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </div>
+    WhatsApp
   </a>
 
   <script>
